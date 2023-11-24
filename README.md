@@ -9,4 +9,5 @@ Executar o comando: "npm run dev" no terminal do VSCode para executar o projeto
 
 Necessário a instalação das dependências do projeto: npm install 
 
- 
+Link hospedagem do site: 
+(professor, pedimos perdão desde já, mas não conseguimos importar o site da forma correta, ele continua dando como página não encontrada)
