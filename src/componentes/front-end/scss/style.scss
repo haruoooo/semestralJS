@@ -1,0 +1,396 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-verde: #99cc99;
+    --color-azul-escuro: #004080;
+    --color-azul-claro: #66b3ff;
+    --color-vermelho:#cc1111;
+    --color-branco: #ffffff;
+    --color-preto: black;
+    --font-body: 'Poppins', sans-serif;
+}
+
+
+body {
+    font-family: var(--font-body);
+
+    header {
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            h2 {
+                color: var(--color-branco);
+                margin-left: 1rem;
+                margin-top: 2rem;
+                font-size: 2.5rem;
+            }
+
+            p {
+                color: var(--color-branco);
+                font-weight: bold;
+                margin-top: 3rem;
+                margin-right: 1rem;
+                margin-left: 1rem;
+                list-style: none;
+                padding: 0;
+            }
+
+            a {
+
+                color: var(--color-branco);
+                background: transparent;
+                padding: 0.1rem;
+                border: 2px solid var(--color-vermelho);
+                border-radius: 8px;
+                text-decoration: none;
+            
+
+
+                &:hover {
+                    background-color: var(--color-vermelho);
+                    color: var(--color-branco);
+                }
+            }
+            
+            li{
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-bottom: 0.5rem;
+            }
+            
+        }
+
+    }
+
+    main {
+        .grid {
+            margin: 20px auto;
+            width: 100%;
+            min-height: 95vh;
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: repeat(5, 10rem) repeat(2, 5rem) repeat(4, 6rem);
+            grid-template-areas:
+                "box1 box1 box1 box1 box1 box1 box1 box6 box6 box6 box6 box6"
+                "box1 box1 box1 box1 box1 box1 box1 box6 box6 box6 box6 box6"
+                "box1 box1 box1 box1 box1 box1 box1 box7 box7 box7 box7 box7"
+                "box2 box2 box3 box3 box3 box3 box3 box7 box7 box7 box7 box7"
+                "box2 box2 box3 box3 box3 box3 box3 box8 box8 box8 box8 box8"
+                "box2 box2 box3 box3 box3 box3 box3 box8 box8 box8 box8 box8"
+                "box4 box4 box4 box4 box4 box5 box5 box8 box8 box8 box8 box8"
+                "box9 box9 box9 box9 box9 box9 box9 box9 box9 box9 box9 box9"
+                "box10 box10 box11 box11 box12 box12 box13 box13 box14 box14 box15 box15"
+                "box10 box10 box11 box11 box12 box12 box13 box13 box14 box14 box15 box15"
+                "box10 box10 box11 box11 box12 box12 box13 box13 box14 box14 box15 box15"
+                "box10 box10 box11 box11 box12 box12 box13 box13 box14 box14 box15 box15"
+            ;
+            gap: 0.5rem;
+        }
+
+        @media (max-width:768px) {
+            .grid {
+                grid-template-columns: repeat(1, 1fr);
+                grid-template-rows: repeat(21, 15rem);
+                grid-template-areas:
+                    "box1"
+                    "box1"
+                    "box2"
+                    "box3"
+                    "box3"
+                    "box6"
+                    "box7"
+                    "box7"
+                    "box8"
+                    "box8"
+                    "box5"
+                    "box9"
+                    "box11"
+                    "box10"
+                    "box10"
+                    "box13"
+                    "box12"
+                    "box12"
+                    "box15"
+                    "box14"
+                    "box14";
+                gap: 0.5rem;
+
+            }
+        }
+
+        @media (min-width:769px) and (max-width:1024px) {
+            .grid {
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-rows: repeat(3, 15rem) 8rem repeat(4, 15rem) repeat(8, 10rem);
+                grid-template-areas:
+                    "box1 box1 box1 box1"
+                    "box1 box1 box1 box1"
+                    "box2 box3 box3 box3"
+                    "box2 box3 box3 box3"
+                    "box6 box6 box6 box6"
+                    "box7 box7 box7 box7"
+                    "box8 box8 box8 box8"
+                    "box8 box8 box8 box8"
+                    "box4 box4 box5 box5"
+                    "box9 box9 box9 box9"
+                    "box10 box10 box11 box11"
+                    "box10 box10 box11 box11"
+                    "box12 box12 box13 box13"
+                    "box12 box12 box13 box13"
+                    "box14 box14 box15 box15"
+                    "box14 box14 box15 box15"
+
+                ;
+                gap: 0.5rem;
+            }
+        }
+
+
+
+
+
+        section {
+
+            .grid-1 {
+                grid-area: box1;
+            }
+
+            .grid-2 {
+                grid-area: box2;
+            }
+
+            .grid-3 {
+                grid-area: box3;
+            }
+
+            .grid-4 {
+                grid-area: box4;
+            }
+
+            .grid-5 {
+                grid-area: box5;
+            }
+
+            .grid-6 {
+                grid-area: box6;
+            }
+
+            .grid-7 {
+                grid-area: box7;
+            }
+
+            .grid-8 {
+                grid-area: box8;
+            }
+
+            .grid-9 {
+                grid-area: box9;
+            }
+
+            .grid-10 {
+                grid-area: box10;
+            }
+
+            .grid-11 {
+                grid-area: box11;
+            }
+
+            .grid-12 {
+                grid-area: box12;
+            }
+
+            .grid-13 {
+                grid-area: box13;
+            }
+
+            .grid-14 {
+                grid-area: box14;
+            }
+
+            .grid-15 {
+                grid-area: box15;
+            }
+
+            .box1 {
+                background-image: url(../images/imagem-gs-1.jpg);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                position: relative;
+            }
+
+            .box2 {
+                background-color: transparent;
+                position: relative;
+            }
+
+            .box3 {
+                background-color: transparent;
+                position: relative;
+                border: 2px solid var(--color-preto);
+            }
+
+            .box4 {
+                background-color: transparent;
+                position: relative;
+            }
+
+            .box5 {
+                background-color: transparent;
+                position: relative;
+            }
+
+            .box6 {
+                background-color: transparent;
+                position: relative;
+                border: 2px solid var(--color-azul-claro);
+            }
+
+            .box6 {
+                background-color: transparent;
+                position: relative;
+                border: 2px solid var(--color-azul-claro);
+            }
+
+            .box7 {
+                background-color: transparent;
+                position: relative;
+                border: 2px solid var(--color-azul-claro);
+            }
+
+            .box8 {
+                background-color: transparent;
+                position: relative;
+                border: 2px solid var(--color-azul-claro);
+            }
+
+            .box9 {
+                background-color: transparent;
+                position: relative;
+            }
+
+            .box10 {
+                background-image: url(../images/gif-gs-1.gif);
+                position: relative;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+            }
+
+            .box11 {
+                background-color: transparent;
+                position: relative;
+                margin-left: 1rem;
+            }
+
+            .box12 {
+                background-image: url(../images/gif-gs-2.gif);
+                position: relative;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+            }
+
+            .box13 {
+                background-color: transparent;
+                position: relative;
+                margin-left: 1rem;
+            }
+
+            .box14 {
+                background-image: url(../images/gif-gs-3.gif);
+                position: relative;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+            }
+
+            .box15 {
+                background-color: transparent;
+                position: relative;
+                margin-left: 1rem;
+            }
+
+            .titulo-projeto {
+                position: absolute;
+                top: 7rem;
+                right: 1rem;
+                left: 1rem;
+                font-size: 2vmax;
+                color: var(--color-verde);
+            }
+
+            .texto-solucao {
+                position: absolute;
+                top: 7rem;
+                right: 1rem;
+                left: 1rem;
+                font-size: 1.5rem;
+                color: var(--color-branco);
+            }
+
+            .botao {
+                color: var(--color-azul-claro);
+                background: transparent;
+                padding: 0.4rem;
+                border: 2px solid var(--color-azul-claro);
+                border-radius: 8px;
+                text-decoration: none;
+                position: absolute;
+                top: 2.3rem;
+                left: 9rem;
+
+                &:hover {
+                    background-color: var(--color-azul-claro);
+                    color: var(--color-branco);
+                }
+            }
+
+            .vantagens {
+                position: absolute;
+                top: 1rem;
+                left: 1rem;
+                font-size: 2rem;
+                font-weight: bold;
+                color: var(--color-verde);
+            }
+
+            .topicos-vantagens {
+                color: var(--color-branco);
+            }
+
+            .titulo-box {
+                position: absolute;
+                color: var(--color-verde);
+                top: 1rem;
+                left: 1rem;
+            }
+
+            .texto-box {
+                position: absolute;
+                color: var(--color-branco);
+                top: 4rem;
+                left: 1.5rem;
+            }
+
+            .lista {
+                position: absolute;
+                color: var(--color-branco);
+                top: 7rem;
+                left: 3rem;
+                bottom: 3rem;
+            }
+        }
+    }
+
+
+}
