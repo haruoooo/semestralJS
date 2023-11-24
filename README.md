@@ -11,4 +11,5 @@ Necessário a instalação das dependências do projeto: npm install
 
 Link hospedagem do site: https://semestraljs.netlify.app
 (professor, pedimos perdão desde já, mas não conseguimos importar o site da forma correta, ele continua dando como página não encontrada)
+
 Mas segue o link de um vídeo de como nosso projeto está rodando: https://www.youtube.com/watch?v=Gc1A5NPN-e4
